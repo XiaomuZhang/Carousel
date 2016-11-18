@@ -1,0 +1,569 @@
+/*页面基本样式*/
+
+/*=========
+基本默认值
+===========*/
+html{
+    font-size:62.5%;
+    color:#222;
+}
+::selection{
+    background-color: #b3d4fc;
+    text-shadow: none;
+}
+ul{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style:none;
+}
+
+/*=========
+工具样式
+===========*/
+.center-block{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.pull-right{
+    float:right !important;
+}
+.pull-left{
+    float:left !important;
+}
+.text-right{
+    text-align:right !important;
+}
+.text-left{
+    text-align:left !important;
+}
+.text-center{
+    text-align:center !important;
+}
+.hide{
+    display:none !important;
+}
+.show{
+    display:block !important;
+}
+.invisible{
+    visibility:hidden;
+}
+.text-hide{
+    font:0/0 a;
+    color:transparent;
+    text-shadow:none;
+    background-color:transparent;
+    border:0;
+}
+.clearfix:after,
+.clearfix:before{
+    content:"";
+    display:table;
+}
+.clearfix:after{
+    clear:both;
+}
+
+/*=========
+浏览器更新提示
+===========*/
+.browserupgrade{
+    margin:0;
+    padding:1rem;
+    background-color:#ccc;
+}
+/*=========
+自定义页面样式
+===========*/ 
+body{
+    font-size:1.2rem;
+    line-height:1.5;
+    background-color:#f7f7f7;
+}
+a{
+    color:#666;
+    text-decoration:none;
+}
+a:hover,a:active{
+    color:#0ae;
+    text-decoration:underline;
+}
+
+/*网站头部*/
+header{
+    width:100%;
+}
+header .top{
+    line-height:3rem;
+    padding:0 1.5rem;
+    color: #ffffff;
+    background:#555;
+    border-bottom:1px #ecc000 solid;
+}
+header .top .tel{
+    float:left;
+}
+header .top ul{
+    text-align:right;
+}
+header .top ul li{
+    display:inline-block;
+}
+header .top ul li+li{
+    border-left:1px solid #999;
+    margin-left:-6px;
+}
+header .top ul li a{
+    display:inline-block;
+    margin:0 1.5rem;
+    color: #ffffff;
+}
+header .main{
+    line-height:5.5rem;
+    padding:0;
+}
+header .main .brand{
+    float:left;
+    padding:1rem 1.5rem;
+}
+header .main .brand img{
+    width:12.5rem;
+}
+header .main ul{
+    text-align:right;
+}
+header .main ul li{
+    display:inline-block;
+    border-left:1px solid #f0ede9;
+}
+header .main ul li a{
+    display:inline-block;
+    line-height:5.5rem;
+    font-size:1.6rem;
+    padding:0 3rem;
+    font-weight:bold;
+    color:#7c7a65;
+}
+header .main ul li a:hover,
+header .main ul li a:active{
+    color:#ffb300;
+    background-color:#f8f6f1;
+    text-decoration: none;
+}
+
+
+
+/*网站内容*/
+.container{
+    width:100%
+}
+.transaction{
+   width:100%;
+    background-color:#7c7365;
+}
+.trans-content{
+    max-width:90%;
+    margin:0 auto;
+    font-size:1.5rem;
+    text-align:left;
+}
+.trans-data{
+    float:left;
+    padding:1rem;
+    text-align:left;
+}
+.trans-data span{
+    display:inline-block;
+    line-height:3rem;
+    color:#fff;
+}
+.transaction .trans-data .trans-money{
+    font-size:2.3rem;
+    color:#ff9900;
+    background-color:rgba(255, 255, 255, 0.9);
+    padding:0 1rem;
+    margin:0 1rem;
+    border-radius:3px;
+    letter-spacing:3px;
+    box-shadow:1px 2px 1px #333 inset;
+}
+.transaction .trans-report{
+    text-align:right;
+}
+.trans-report a{
+    color:white;
+    display:inline-block;
+    line-height:3rem;
+    padding:1rem;
+    text-align:center;
+}
+
+/*轮播图*/
+.carousel{
+    width:100%;
+    margin-top:0;
+}
+.carousel .picture{
+    height:380px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+    margin:0 auto;
+}
+/* 图片容器 */
+.carousel .picture .list{
+    width:600rem;
+    height:100%;
+    position:absolute;
+    z-index: 1;
+}
+/*图片*/
+.carousel .picture .list img{
+    height:100%;
+    width:1340px;
+    float:left;
+}
+.carousel > .picture > .arrow {
+    cursor: pointer;
+    display: block;
+    width: 6rem;
+    height: 5rem;
+    position: absolute;
+    z-index: 100;
+    margin: 13.33rem 0;
+    background-color: RGBA(0,0,0,.2);
+}
+.carousel > .picture > .arrow > img{
+    position: absolute;
+   -webkit-position:absolute;
+   top:50%;
+   left:50%;
+   margin-left:-25px;
+   margin-top:-25px;
+}
+.carousel .picture .arrow:hover{
+    background-color: RGBA(0,0,0,.3);
+    text-decoration:none;
+}
+.carousel .picture:hover .arrow { display: block;}
+.carousel .picture .prev { left: 3%;}
+.carousel .picture .next { right: 3%;}
+
+.carousel .buttons{
+    width:100%;
+    padding:0.8rem 0;
+}
+.carousel .buttons div{
+    width:6rem;
+    float:left;
+    position:absolute;
+    left:50%;
+    margin-left:-3rem;
+}
+.carousel .buttons div span{
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #999;
+    margin-right:0.4rem;
+    text-align:center;
+}
+.carousel .buttons div .on {
+    background: orangered;
+}
+
+    /*平台特点*/
+.container .feature{
+    width:90%;
+    margin:2rem auto;
+    font-size:0
+}
+.container .feature .item{
+    display:inline-block;
+    width:calc(33.3333333333% - 3rem);
+    box-shadow:0 0 4px #ccc;
+    padding:1rem;
+    background-color:#fff;
+    font-size:1.4rem
+}
+.container .feature .item+.item{
+    margin-left:1.5rem;
+}
+.container .feature .item h3{
+    display:inline-block;
+    font-size:3.3rem;
+    color:#ff9900;
+    width:40%;
+    margin:0;
+    padding:0;
+    text-align:center;
+    vertical-align:top;
+}
+.container .feature .item p{
+    display:inline-block;
+    width:55%;
+    margin:0;
+    padding:0;
+    color:#999;
+}
+/*最新公告*/
+.container .notice{
+    width:90%;
+    margin:2rem auto;
+    font-size:1.4rem;
+    line-height:3rem;
+    background-color:#fff;
+    box-shadow:0 0 4px #ccc;
+}
+.container .notice a{
+    float:left;
+    display:inline-block;
+    width:70%;
+    margin-left:2rem;
+    text-decoration:none;
+}
+.container .notice a:first-child{
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
+.container .notice a:first-child::before{
+    content: "最新公告：\00a0\00a0";
+    color:#aaa;
+}
+.container .notice a span{
+    color:#999;
+    font-size:1.2rem;
+    margin-right:1rem;
+}
+.container .notice .more{
+    float:right;
+    width:auto;
+    margin-right:2rem;
+    color:#ff9900;
+}
+/*产品列表*/
+.container .product{
+    width:90%;
+    margin:2rem auto;
+    font-size:1.4rem;
+    background-color:#f5f9fa;
+    border-top:2px solid #ff9900;
+    box-shadow:0 0 4px #ccc;
+}
+.container .product h2{
+    float:left;
+    width:20%;
+    margin-top:3rem;
+    text-align:center;
+    font-weight:normal;
+    font-size:2.4rem;
+    color:#635c51;
+}
+.container .product h2 i{
+    display:block;
+    font-size:1.6rem;
+    margin-top:1rem;
+}
+.container .product h2 i:first-child{
+    margin-top:4rem;
+}
+.container .product .product-content{
+    float:right;
+    width:79.5%;
+    border-left:1px solid #eee;
+    background-color:#fff;
+}
+.product .product-content .item{
+    width:100%;
+}
+.product .product-content .item+.item{
+    border-top:1px solid #eee;
+}
+.product .product-content .item h3{
+    width:30%;
+    float:left;
+    margin:1.5rem 0;
+    font-size:1.4rem;
+    font-weight:normal;
+    text-align:center;
+}
+.product .product-content .item h3 em{
+    font-size:3.6rem;
+    margin-right:0.5rem;
+    font-style:normal;
+    color:#999;
+}
+.product .product-content .item h3 i{
+    display:block;
+    font-size:1.2rem;
+    font-style:normal;
+    color:#999;
+}
+.product .product-content .item .info{
+    float:left;
+    width:48%;
+    padding:1rem;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size:14px;
+}
+.product .product-content .item .info p{
+    float:left;
+    display:inline-block;
+    width:56%;
+    text-align:center;
+}
+.product .product-content .item .info p:last-child {
+    width: 40%;
+}
+
+.product .product-content .item .info p span {
+    display: block;
+    font-size: 2.4rem;
+    color: #ff9900;
+}
+
+.product .product-content .item .info p span i {
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #999;
+}
+
+.product .product-content .item .buy{
+    float:left;
+    width:calc(22% - 4.2rem);
+    padding:1rem;
+    text-align:center;
+}
+
+.product .product-content .item .buy a{
+    display:block;
+    width:90%;
+    margin:1.8rem auto;
+    max-width:12rem;
+    text-align:center;
+    line-height:4rem;
+    color: #fff;
+    background-color: #ff9900;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.product .product-content .item .buy a:hover,
+.product .product-content .item .buy a:active {
+    background-color: #ffc468;
+}
+.product .product-content .item .buy a.disabled {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+}
+/*底部导航*/
+
+.link{
+    border-top:2px solid #eee;
+    margin:2rem auto;
+    background-color:#fff;
+}
+.link .link-content{
+    width:90%;
+    margin:0 auto;
+}
+.link .link-content .brand{
+    float:left;
+    background: url(../img/logo@1x.png) no-repeat left;
+    width:20%;
+    display:block;
+    height:35px;
+    background-size: 150px 35px;
+    -webkit-filter:grayscale(100%);
+    filter: grayscale(100%);
+}
+.link .link-content ul{
+    float:left;
+    width:15%;
+}
+.link .link-content ul li{
+    font-size:1.4rem;
+    line-height:2.4rem;
+}
+.footer-content ul li .title {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+/*网站信息*/
+footer{
+    width:100%;
+    padding:3rem 0 5rem;
+    background-color:#ededed;
+}
+footer ul{
+    text-align:center;
+}
+footer ul li{
+    display:inline-block;
+}
+footer p{
+    text-align:center;
+    color:#999;
+}
+footer ul li .icon{
+    display:inline-block;
+    text-indent:-999rem;
+    margin-right:1.5rem;
+    background:url(https://i.alipayobjects.com/e/201307/jebmKcbrh.png) no-repeat;
+    background-size:466px 447px;
+    overflow: hidden;
+}
+footer ul li .icon-zfywxk{
+    width:38px;
+    height:27px;
+    background-position:-369px -45px;
+}
+footer ul li .icon-pcirz{
+    width:78px;
+    height:27px;
+    background-position:-110px -96px;
+}
+footer ul li .icon-visayz{
+    width:36px;
+    height:27px;
+    background-position:-426px -90px;
+}
+footer ul li .icon-vsjmfw{
+    width:63px;
+    height:27px;
+    margin-right:13px;
+    background-position:-401px -186px;
+}
+footer ul li .icon-wlgs{
+    width:22px;
+    height:27px;
+    background-position:-48px -48px;
+}
+footer ul li .icon-rzcx{
+    width:75px;
+    height:27px;
+    background-position:0 -320px;
+}
+footer ul li .icon-shgs{
+    width:30px;
+    height:30px;
+    background:url(../img/cert2.png) no-repeat;
+    background-position:0 0;
+    background-size:30px;
+}
+
+
+
+
+
+
+
+
