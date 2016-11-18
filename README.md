@@ -19,8 +19,12 @@ rem是相对于根元素<html>，，不会受到父级的影响，一般浏览�
 ###3.div.box的宽度值        
 为了解决撑破容器的问题，可使用CSS3新属性calc()去计算div.box的宽度,比如:`width:calc(30% - (padding值 + marging值 + border值))`。通过calc()计算后，div.box不在会超出其父亲容器的宽度。       
 ###4.轮播图(详见main.js)    
-大体思路:使用'imgWidth = $(window).width()'获取屏幕宽度，在carousel容器中定义一个picture容器，图片在其中
-浮动排列，三张图片的顺序为 3 1 2 3 1。点击切换按钮，调用animate()函数，函数内传入当前图片宽度的数值，向右切换为负值，向左为正，
+大体思路:使用'imgWidth = $(window).width()'获取屏幕宽度，在carousel容器中定义一个.list容器（绝对定位），图片在其中
+浮动排列，三张图片的排列为 3 1 2 3 1。        
+**a** .点击切换按钮，调用animate()函数，函数内传入当前图片宽度的数值，向右滑动传入正值，向左传入负值；      
+**b** .在animate()中，根据传入的计算偏移量，加在.list标签的left属性中，从而实现图片的切换；       
+**c** .定义一个全局变量index,用以高亮显示轮播图的指示按钮，jQuery代码`$dot.removeClass('on').eq(index-1).addClass('on')`,包装在函数中，每次切换需调用该函数;       
+**d** .动态获取屏幕尺寸，`imgWidth = $(window).width()`，用以设置图片及可视窗口宽度:  
 ```     
 //设置图片宽度
 $('.list').find('img').css('width', imgWidth);
@@ -44,20 +48,4 @@ $('.picture').find('.list').css('left', -imgWidth);
             $(item).attr('src', src + size + '.png');
         });   
 ```
-关于图片切换：   
-```
-//点击箭头，图片向右滑动
-    $next.on('click', function (){
-        //如果切换动画未执行完成，则不触发该次事件
-        if ($list.is(':animated')) {
-            return;
-        }
-        if (index == 3) {
-            index =1;
-        }else{
-            index += 1;
-        }
-        animate(-imgWidth);
-        showButton();
-    });
 
