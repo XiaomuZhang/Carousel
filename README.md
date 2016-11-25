@@ -15,7 +15,7 @@
 ```
 ###2.字体大小       
 rem是相对于根元素<html>，，不会受到父级的影响，一般浏览器默认字体大小16px，在html选择器中设置font-size:62.5%(10/16 * 100% = 62.5%)，则浏览器字体大小改为10px，1rem=10px。       
-(也可以在html选择器设置font-size：20px)     
+(由于chrome浏览器字体最小为12px，可以在html选择器统一设置font-size：20px)     
 ###3.div.box的宽度值        
 为了解决撑破容器的问题，可使用CSS3新属性calc()去计算div.box的宽度,比如:`width:calc(30% - (padding值 + marging值 + border值))`。通过calc()计算后，div.box不在会超出其父亲容器的宽度。       
 ###4.轮播图(详见main.js)    
