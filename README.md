@@ -1,4 +1,5 @@
 #Carousel
+[展示地址](https://xiaomuzhang.github.io/Carousel/)
 该项目为一个公司主页网站，其中主要技术点为要实现在不同屏幕尺寸下的轮播图效果。可兼容Chrome\Firefox\IE9及以上。        
 技术点：        
 ###1.清除浮动       
